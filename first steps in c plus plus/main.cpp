@@ -55,12 +55,34 @@ int main() {
 }
 */
 
-#include <iostream>
+/*#include <iostream>
+
+//Definicje funkcji
+
+double dodaj(double a, double b) {
+	return a + b;
+}
+
+double odejmij(double a, double b) {
+	return a - b;
+}
+
+double pomnoz(double a, double b) {
+	return a * b;
+}
+
+double podziel(double a, double b) {
+	if (b != 0) {
+		return a / b;
+	} else {
+		std::cout << "Blad: Dzielenie przez zero!" << std::endl;
+		return 0;
+	}
+}
 
 int main() {
 	
 	int wybor;
-	double a, b; //double poniewa¿ obs³uguje wszystkie typy danych. Dziêki temu unikam powtórzeñ
 	short liczbaShort;
 	int liczbaInt;
 	long liczbaLong;
@@ -68,12 +90,22 @@ int main() {
 	float liczbaFloat;
 	double liczbaDouble;
 
-	std::cout << "Wybierz opcje:\n" << std::endl;
-	std::cout << "1. Dodawanie\n" << std::endl;
-	std::cout << "2. Odejmowanie\n" << std::endl;
-	std::cout << "3. Mnozenie\n" << std::endl;
-	std::cout << "4. Dzielenie\n" << std::endl;
-	std::cin >> wybor;
+	while (true) {
+		std::cout << "Wybierz opcje:\n" << std::endl;
+		std::cout << "1. Dodawanie\n" << std::endl;
+		std::cout << "2. Odejmowanie\n" << std::endl;
+		std::cout << "3. Mnozenie\n" << std::endl;
+		std::cout << "4. Dzielenie\n" << std::endl;
+		std::cin >> wybor;
+
+		if (wybor >= 1 && wybor <= 4) {
+			break;
+		} else {
+			std::cout << "Wybrano nieprawidlowa opcje! Sprobuj ponownie." << std::endl;
+		}
+	}
+
+	double a, b; //double poniewa¿ obs³uguje wszystkie typy danych. Dziêki temu unikam powtórzeñ
 
 	std::cout << "Podaj pierwsza liczbe: " << std::endl;
 	std::cin >> a;
@@ -82,17 +114,17 @@ int main() {
 
 	switch (wybor){
 	case 1:
-		std::cout << "Wynik dodawania = " << a + b << std::endl;
+		std::cout << "Wynik dodawania = " << dodaj(a,b) << std::endl;
 		break;
 	case 2:
-		std::cout << "Wynik odejmowania = " << a - b << std::endl;
+		std::cout << "Wynik odejmowania = " << odejmij(a,b) << std::endl;
 		break;
 	case 3:
-		std::cout << "Wynik mnozenia = " << a * b << std::endl;
+		std::cout << "Wynik mnozenia = " << pomnoz(a,b) << std::endl;
 		break;
 	case 4:
 		if (b != 0) {
-			std::cout << "Wynik dzielenia = " << a / b << std::endl;
+			std::cout << "Wynik dzielenia = " << podziel(a,b) << std::endl;
 		} else {
 			std::cout << "Blad: Dzielenie przez zero!" << std::endl;
 		}
@@ -104,3 +136,4 @@ int main() {
 
 	return 0;
 }
+*/
